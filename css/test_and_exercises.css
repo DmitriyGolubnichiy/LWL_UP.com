@@ -17,6 +17,7 @@ h1{
 }
 .tests img{
     margin: 60px;
+    transition: color 0.2s;
 }
 
 .tests a{
