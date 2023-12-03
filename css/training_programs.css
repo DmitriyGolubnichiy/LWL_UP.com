@@ -1,0 +1,47 @@
+.space{
+    height: 100px;
+    background-image: url(../pictures/background\ for\ other\ страницы\ В\).svg);   
+}
+
+h1{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.tests{
+    height: 540px;
+    background-color: #DDAAAA;
+    padding-left: 140px;
+    
+}
+.tests img{
+    margin: 60px;
+}
+
+.tests a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    transition: color 0.2s;
+    margin-top: 60px;
+}
+
+h2{
+    margin-left: 125px;
+    margin-top: -30px;
+    font-size: 27px;
+    
+}
+.tests a:hover{
+    color: #774949;
+}
+
+#talking{
+    margin-left: 190px;
+}
+
+#exam{
+    margin-left: 165px;
+}
+

@@ -1,0 +1,45 @@
+*{
+    font-family: 'Inter', sans-serif;
+}
+/* HEADER */
+
+header{
+    height: 143px;
+    background: url(../pictures/background\ header\ haltura.svg);
+    background-size: 100%;
+}
+
+.header__inner{
+    display: flex;
+}
+
+.nav{
+    font-size: 20px;
+    padding-top: 105px; 
+}
+
+.nav__link{
+    display: inline-block;
+    vertical-align: top;
+    color: black;
+    text-decoration: none;
+    margin: 0px 35px;
+    transition: color 0.2s linear;
+}
+
+.nav__link__mainpage{
+    color: black;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    background: linear-gradient(45deg, #CBD6F3 33%, #EFC6C6);
+    margin-left: -35px;
+    margin-bottom: 20px;
+    padding: 4px 162px 4px 162px;
+
+    
+}
+
+.nav__link:hover{
+    color:#4D6AB2;
+}

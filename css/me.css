@@ -1,0 +1,26 @@
+.space{
+    height: 100px;
+    background-image: url(../pictures/background\ for\ other\ страницы\ В\).svg);   
+}
+
+h1{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.aboutme{
+    height: 540px;
+    background-color: #7F97D4;
+    display: flex;
+}
+
+.aboutme h2{
+    font-size: 25px;
+    margin-left: 37px;
+    margin-top: 44px;
+    color: white;
+    text-align: justify;
+    width: 60%;
+    line-height: 35px;
+}

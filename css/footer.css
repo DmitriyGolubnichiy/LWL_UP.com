@@ -1,0 +1,20 @@
+/* FOOTER */
+
+footer{
+    height: 150px;
+    background-color: #4D6AB2;
+    display: flex;
+    
+}
+footer img{
+    margin-top: 25px;
+    margin-left: 15px;
+    
+}
+footer p{
+    display: inline-block;
+    text-align: justify;
+    font-size: 25px;
+    margin-left: 35px;
+    color: #FFFFFF;
+}

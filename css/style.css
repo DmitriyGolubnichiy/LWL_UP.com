@@ -1,0 +1,111 @@
+
+/* TITLE */
+ 
+.title{
+    background-color: #EBEBEB;
+    height: 307px;
+    font-size: 100px;
+    
+    padding-left: 185px;
+    padding-top: 50px;
+}
+.best__trainer{
+    font-size: 25px;   
+}
+
+span{
+    color: #4D6AB2;
+}
+.space{
+    color: black;
+}
+
+/* Intro */
+
+.intro{
+    height: 540px;
+    background-color: #7F97D4; 
+}
+
+.intro h1{
+    color: white;
+    font-size: 30px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 35px;
+    line-height: 1.5;
+    max-width: 50%;
+    text-align: justify; 
+}
+
+/* SkillTest */
+
+.skill__test{
+    height: 295px; 
+    background-color:#EBEBEB;
+    
+
+}
+.skill__test h2{
+    font-size: 24px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+    max-width: 50%;
+    line-height: 2;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.skill__test__button a{
+    font-size: 20px;
+    color: black;
+    position: absolute;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 110px;
+    margin-left: 334px;
+    transition: color 0.2s ;
+    
+}
+
+.skill__test__button a:hover{
+    color: #4D6AB2;
+}
+
+.skill__test__button{
+    display: inline-block;
+}
+
+/* Comments */
+
+.comments{
+    height: 600px;
+    background-color: #DDAAAA;
+}
+
+.comments h1{
+    position: absolute;
+    font-size: 40px;
+    color: black;
+    margin-left: 840px;
+    margin-top: 30px;
+}
+
+.container{
+    display: inline-block;
+    width: 450px;
+    height: 150px;
+    background-color: #DDAAAA;
+    border-radius: 25px;
+    border: 5px white;
+    border-style: solid;
+    margin-top: 100px;
+    margin-left: 122px;
+    margin-bottom: 50px;
+}   
+
+.container text{
+    font-size: 20px;
+}
+
