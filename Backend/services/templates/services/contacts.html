@@ -1,0 +1,68 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header__inner">
+            <div class="header__logo">
+                <img src="{% static 'pictures/логотип.svg' %}" alt="">
+            </div>
+            <div class="nav">
+
+                <a class="nav__link" href="{% url 'me' %}" style="background-color: #CBD6F3; margin-left: 0px; padding: 4px 50px 0px 50px; margin-bottom: 20px">Обо мне</a>
+                <a class="nav__link" href="{% url 'training_programs' %}" style="background-color:#EFC6C6; margin-left: -35px ;padding: 4px 50px 0px 50px; margin-bottom: 20px">Программы обучения</a>
+                <a class="nav__link" href="{% url 'contacts' %}" style="background-color:#CBD6F3; margin-left: -35px ;padding: 4px 50px 4px 50px; margin-bottom: 20px;">Контакты</a>
+                <a class="nav__link" href="{% url 'test_and_exercises' %}" style="background-color:#EFC6C6; margin-left: -35px ;padding: 4px 50px 4px 50px; margin-bottom: 20px">Тесты и задания</a>
+
+                <a class="nav__link__mainpage" href="{% url 'index' %}" >Learn  With Love</a>
+
+                <a class="nav__link" href="{% url 'log_in' %}" style="background-color: #CBD6F3; margin-left: 0px; padding: 4px 85px 4px 85px; margin-bottom: 20px">Вход</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="space">
+        <h1>Контакты</h1>
+    </div>
+
+    <div class="manager">
+        <img src="{% static 'pictures/Валерчик.svg'%}" alt="">
+        <h2>Англичанин Валерий Анатольевич<br><br>
+            По всем вопросам касательно оплаты, возврата, и других
+            услуг вам поможет Валерий. Только знайте, он очень
+            разговорчив и приветлив В)
+
+        </h2>
+    </div>
+
+    <div style="padding-top: 1px;" class="space">
+        <h3>
+            <p style="color:#B43131;margin-top: 25px;">Горячая линия</p>По всем вопросам обращаться сюда: 8-111-111-11-11
+        </h3>
+    </div>
+
+
+    <footer>
+        <div class="footerFace">
+            <a href="https://discord.com/"><img src="{% static 'pictures/Discord.svg' %}" alt=""></a>
+            <a href="https://mail.google.com/"><img src="{% static 'pictures/Google.svg' %}" alt=""></a>
+            <p>Подпишитесь, чтобы не пропустить обновления</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -80,32 +80,31 @@ span{
 /* Comments */
 
 .comments{
-    height: 600px;
+    height: 400px;
     background-color: #DDAAAA;
 }
 
 .comments h1{
-    position: absolute;
     font-size: 40px;
     color: black;
     margin-left: 840px;
-    margin-top: 30px;
+
 }
 
 .container{
-    display: inline-block;
+    display:inline-flex;
     width: 450px;
-    height: 150px;
+    height: 200px;
     background-color: #DDAAAA;
     border-radius: 25px;
     border: 5px white;
     border-style: solid;
-    margin-top: 100px;
     margin-left: 122px;
     margin-bottom: 50px;
 }   
 
-.container text{
-    font-size: 20px;
+.container {
+    font-size: 16px;
+    text-align:justify;
 }
 
