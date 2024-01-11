@@ -17,20 +17,21 @@ h1{
 }
 
 .tests{
-    height: 700px;
+    height:auto;
     background-color: #DDAAAA;
 }
 
 .service_card{
-
+    margin-left:5px;
     margin-top:8px;
-    height: 600px;
+    height: auto;
     color: #EBEBEB;
     background-color: #7F97D4;
     width:435px;
     font-size:16px;
     text-align:justify;
     word-break: break-all;
+    padding-top:10px;
 
 }
 .service_image{
@@ -46,4 +47,9 @@ h1{
     font-size:20px;
     margin-top:10px
 }
-
+.add-service{
+    margin-bottom:10px;
+    margin-left:10px;
+    width:95%;
+    border:none;
+}

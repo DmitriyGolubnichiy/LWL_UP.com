@@ -1,6 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, HttpResponseRedirect
 from .forms import ServiceForm
-from .models import Service
+from .models import Service, Basket
+from users.models import User
+from django.urls import reverse
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     context = {'title': "LWL_UP.com",}
@@ -19,9 +22,6 @@ def me(request):
 def test_and_exercises(request):
     return  render(request,'services/test_and_exercises.html')
 
-def log_in(request):
-    return render(request, 'services/log_in.html')
-
 def contacts(request):
     return render(request,'services/contacts.html')
 
@@ -31,7 +31,7 @@ def create(request):
         form = ServiceForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('training_programs')
+            return HttpResponseRedirect(reverse('index'))
         else:
             error = 'Форма была неверной'
 
@@ -44,3 +44,20 @@ def create(request):
     }
 
     return render(request, 'services/create.html',data)
+@login_required
+def basket_add(request, service_id):
+    service = Service.objects.get(id=service_id)
+    baskets = Basket.objects.filter(user=request.user, service = service)
+    if not baskets.exists():
+        Basket.objects.create(user=request.user,service=service,quantity=1)
+    else:
+        basket = baskets.first()
+        basket.quantity += 1
+        basket.save()
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+@login_required
+def basket_remove(request, basket_id):
+    basket = Basket.objects.get(id=basket_id)
+    basket.delete()
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])

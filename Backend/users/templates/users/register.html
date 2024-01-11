@@ -1,0 +1,40 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <title>Регистрация</title>
+</head>
+<body>
+    {% if form.errors %}
+        <div class="error">
+            {{ form.errors }}
+        </div>
+    {% endif %}
+
+    <div class="login">
+         <div class="head__login">
+             <h1>Регистрация</h1><a href="{% url 'users:log_in' %}"><img  style="" src="{% static 'pictures/login_cross.svg' %}" alt=""></a>
+         </div>
+        <form action="{% url 'users:register' %}" method="post">
+            {% csrf_token %}
+            <div class="container">
+                {{ form.first_name }}
+                {{ form.last_name }}
+                {{ form.username }}
+                {{ form.email }}
+                {{ form.password1 }}
+                {{ form.password2 }}
+            </div>
+            <button class="OK__button">ОК</button>
+        </form>
+    </div>
+</body>
+</html>

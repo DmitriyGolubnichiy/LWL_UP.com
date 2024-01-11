@@ -4,18 +4,22 @@
 /* HEADER */
 
 header{
-    height: 143px;
-    background: url(../pictures/background\ header\ haltura.svg);
+    height: 200px;
+    background:linear-gradient(#728ED2,#4D6AB2);
     background-size: 100%;
 }
 
 .header__inner{
     display: flex;
 }
+.header__logo img{
 
+   height:200px;
+
+}
 .nav{
     font-size: 20px;
-    padding-top: 105px; 
+    padding-top: 162px;
 }
 
 .nav__link{
@@ -34,8 +38,8 @@ header{
     text-decoration: none;
     background: linear-gradient(45deg, #CBD6F3 33%, #EFC6C6);
     margin-left: -35px;
-    margin-bottom: 20px;
-    padding: 4px 162px 4px 162px;
+    margin-bottom: 50px;
+    padding: 4px 136px 4px 136px;
 
     
 }

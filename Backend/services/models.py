@@ -1,6 +1,7 @@
 
 from django.db import models
 
+from users.models import User
 
 
 class Service(models.Model):
@@ -13,3 +14,15 @@ class Service(models.Model):
 
     def __str__(self):
         return f'Тариф: {self.name}'
+
+class Basket(models.Model):
+    user = models.ForeignKey(to=User,on_delete=models.CASCADE)
+    service = models.ForeignKey(to=Service,on_delete=models.CASCADE)
+    quantity = models.PositiveSmallIntegerField(default=0)
+    created_timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'Тарифы для {self.user.username} | Тариф: {self.service.name}'
+
+    def sum(self):
+        return self.service.price * self.quantity

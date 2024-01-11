@@ -1,0 +1,32 @@
+{% load static %}
+
+{% if baskets %}
+    <div class="Service-basket">
+        <div class="basket-head">
+            <h3>Корзина тарифов</h3>
+        </div>
+        {% for basket in baskets %}
+        <div class="basket-elements__background">
+            <div class="basket-elements">
+                <p style="font-weight:700;">{{ basket.service.name }}</p>
+                <p>{{basket.service.description}}</p>
+                <div class="cost"><input value="{{ basket.quantity }}" style="width:20%;height:35px;margin-left:10px;margin-top:10px;">
+                    <h4>{{ basket.sum }} руб.</h4>
+                    <button><a href="{% url 'services:basket_remove' basket.id %}"><img style="height:25px" src="{% static 'pictures/trash-bin.png' %}"></a></button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="total">
+            <h5>Итого</h5>
+            <h6>{{ total_sum }}</h6>
+        </div>
+        <a class="button-buy" href="{% url 'index' %}">Оформить заказ</a>
+    </div>
+{% else %}
+    <div class="Service-basket">
+        <div class="basket-head" style='background-color:#EBEBEB'>
+            <h3>Ваша корзина пуста</h3>
+        </div>
+    </div>
+{% endif %}
